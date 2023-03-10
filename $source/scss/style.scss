@@ -1,0 +1,154 @@
+@import "normalize.scss";
+@font-face {
+	font-family: "Helvetica", sans-serif;
+	src: url("../fonts/helvetica.woff2");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Helvetica-Bold", sans-serif;
+	src: url("../fonts/helvetica-bold.woff2");
+	font-style: normal;
+	font-weight: 700;
+}
++ img {
+	max-width: 100%;
+}
+
+body {
+	font-family: "Helvetica", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #5c5c5e;
+}
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	border-bottom: 1px solid #cacad6;
+	// .header__nav
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+
+	// .header__logo
+
+	&__logo {
+	}
+
+	// .header__basket
+
+	&__basket {
+		position: relative;
+	}
+
+	&__basket_on span {
+		font-size: 11px;
+		width: 15px;
+		height: 15px;
+		background-color: #000;
+		border-radius: 50%;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: -2px;
+		right: -2px;
+	}
+}
+.menu {
+	display: flex;
+	gap: 0 20px;
+	// .menu__list
+
+	&__list {
+	}
+
+	// .menu__link
+
+	&__link {
+	}
+}
+
+.top {
+	min-height: calc(100vh - 81px);
+	background-image: url("../../img/top/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	// .top__title
+
+	&__title {
+		padding-top: 19.167%;
+		font-size: 96px;
+		margin-bottom: 10px;
+	}
+
+	// .top__subtitle
+
+	&__subtitle {
+		font-size: 36px;
+		margin-bottom: 5px;
+	}
+
+	// .top__tex
+
+	&__text {
+		font-size: 13px;
+		margin-bottom: 50px;
+	}
+
+	// .top__buy-btn
+
+	&__buy-btn {
+	}
+
+	// .top__buy-text
+
+	&__buy-text {
+		padding-top: 6px;
+		font-size: 13px;
+	}
+}
+
+.buy-btn {
+	cursor: pointer;
+	background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+	display: flex;
+	text-transform: uppercase;
+
+	// .buy-btn__text
+
+	&__text {
+		color: #f6f4f5;
+		padding-top: 21px;
+		padding-bottom: 21px;
+		padding-left: 111px;
+		padding-right: 111px;
+		padding: 20px 110px;
+	}
+
+	// .buy-btn__price
+
+	&__price {
+		color: #5c5c5e;
+		background-color: #f6f4f5;
+		padding: 20px 105px;
+	}
+}
