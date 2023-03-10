@@ -1,33 +1,27 @@
-//Инициализируем Swiper
+'use strict'
 
-const swiper = new Swiper('.swiper', {
-	// Optional parameters
-	loop: true,
+// слайдер
 
-	// Navigation arrows
-	navigation: {
-		nextEl: '.blog__button-right',
-		prevEl: '.blog__button-left',
-	},
-	breakpoints: {
-		0: {
-			slidesPerView: 1,
-		},
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		}
-	}
+const tabItem = document.querySelectorAll('.tabs__btn-item');
+const tabContent = document.querySelectorAll('.tabs__content-item');
 
-});
-
-
-//бургер-меню
-
-const menuBtn = document.querySelector('.menu__btn');
-const menuMobile = document.querySelector('.menu__mobile');
-
-menuBtn.addEventListener('click', () => {
-	menuMobile.classList.toggle('menu__open');
+tabItem.forEach(function (element) {
+	element.addEventListener('click', open);
 })
+
+function open(evt) {
+	const tabTarget = evt.currentTarget;
+	const button = tabTarget.dataset.button;
+
+	tabItem.forEach(function (item) {
+		item.classList.remove('tabs__btn-item_active')
+	})
+
+	tabContent.forEach(function (item) {
+		item.classList.remove('tabs__content-item_active')
+	})
+
+	tabTarget.classList.add('tabs__btn-item_active')
+	document.querySelector(`#${button}`).classList.add('tabs__content-item_active')
+}
 

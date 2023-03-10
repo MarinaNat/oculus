@@ -108,8 +108,16 @@ h6 {
   font-style: normal;
   font-weight: 700;
 }
-+ img {
+img {
   max-width: 100%;
+}
+
+button {
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
 }
 
 body {
@@ -126,23 +134,31 @@ body {
   padding: 0 10px;
 }
 
+.title {
+  text-transform: uppercase;
+}
+
 .header {
   border-bottom: 1px solid #cacad6;
 }
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 80px;
 }
+.header__logo {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
 .header__basket {
   position: relative;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 .header__basket_on span {
   font-size: 11px;
@@ -207,14 +223,146 @@ body {
 }
 .buy-btn__text {
   color: #f6f4f5;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 111px;
-  padding-right: 111px;
+  text-transform: uppercase;
   padding: 20px 110px;
 }
 .buy-btn__price {
   color: #5c5c5e;
   background-color: #f6f4f5;
   padding: 20px 105px;
+}
+
+.features {
+  padding: 100px 0;
+}
+.features__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.features__title {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  padding-right: 20px;
+}
+.features__subtitle {
+  max-width: 330px;
+  margin-bottom: 2px;
+}
+.subtitle {
+  text-transform: uppercase;
+  font-size: 36px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc10d8), to(rgba(80, 0, 250, 0.93)));
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px auto;
+  grid-template-columns: 300px auto;
+}
+.tabs__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.tabs__btn-item {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.tabs__btn-item_active {
+  color: #070707;
+}
+.tabs__content {
+  position: relative;
+  min-height: 300px;
+}
+.tabs__content-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 40px 280px;
+  grid-template-columns: auto 280px;
+  -ms-grid-rows: auto 40px 150px;
+  grid-template-rows: auto 150px;
+  gap: 40px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.tabs__content-item > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.tabs__content-item > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.tabs__content-item > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.tabs__content-item > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.tabs__content-item_active {
+  opacity: 1;
+}
+.tabs__content-img {
+  grid-row: 1/-1;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+.tabs__content-box h3 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.tabs__content-box p {
+  line-height: 18px;
+}
+
+.video {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  width: 280px;
+  height: 150px;
+  background-image: url("../img/features/02.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 9px 10px;
+}
+.video__btn {
+  margin-left: 22px;
+  margin-bottom: 9px;
+}
+
+.video span {
+  color: #f6f4f5;
+  font-style: 13px;
 }
