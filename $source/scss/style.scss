@@ -103,7 +103,7 @@ body {
 
 .top {
 	min-height: calc(100vh - 81px);
-	background-image: url("../../img/top/bg.jpg");
+	background-image: url("../img/top/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom center;
@@ -238,7 +238,7 @@ body {
 
 	&__content-item {
 		display: grid;
-		grid-template-columns: auto 280px;
+		grid-template-columns: auto 300px;
 		grid-template-rows: auto 150px;
 		gap: 40px;
 		opacity: 0;
