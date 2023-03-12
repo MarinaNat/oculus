@@ -555,3 +555,39 @@ body {
 .equipment__box-subtitle {
   line-height: 50px;
 }
+
+.promo {
+  margin-bottom: 100px;
+}
+.promo__inner {
+  background-image: url("../img/promo/bg.jpg");
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+.promo__btn {
+  font-weight: 700;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc10d8), to(rgba(80, 0, 250, 0.93)));
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
