@@ -141,20 +141,6 @@ body {
 .header {
   border-bottom: 1px solid #cacad6;
 }
-.header__nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80px;
-}
-.header__logo {
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
 .header__basket {
   position: relative;
   -ms-grid-column-align: end;
@@ -179,6 +165,22 @@ body {
   position: absolute;
   bottom: -2px;
   right: -2px;
+}
+
+.nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+.logo {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .menu {
@@ -737,4 +739,20 @@ body {
   position: absolute;
   right: 0;
   bottom: 5px;
+}
+
+.footer {
+  border-top: 1px solid #cacad6;
+  border-bottom: 1px solid #cacad6;
+  margin-bottom: 44px;
+  padding: 30px 0;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
